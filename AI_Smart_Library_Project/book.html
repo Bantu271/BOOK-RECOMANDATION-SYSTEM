@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Smart Digital Library</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="particles"></div>
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <h1>AI LIBRARY</h1>
+    </div>
+
+    <ul class="menu">
+        <li class="active">Dashboard</li>
+        <li>Books</li>
+        <li>Analytics</li>
+        <li>Favorites</li>
+        <li>AI Assistant</li>
+    </ul>
+
+</aside>
+
+<main class="main">
+
+    <header class="topbar">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search books..."
+        >
+
+        <button id="themeToggle">
+            🌙
+        </button>
+
+    </header>
+
+    <section class="kpi-grid">
+
+        <div class="card">
+            <h3>Total Books</h3>
+            <p id="totalBooks">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Favorites</h3>
+            <p id="favoriteCount">0</p>
+        </div>
+
+        <div class="card">
+            <h3>AI Accuracy</h3>
+            <p>96%</p>
+        </div>
+
+        <div class="card">
+            <h3>Reading Hours</h3>
+            <p>128h</p>
+        </div>
+
+    </section>
+
+    <section class="library-section">
+
+        <h2>Add Book</h2>
+
+        <div class="book-form">
+
+            <input type="text" id="title" placeholder="Book Title">
+
+            <input type="text" id="author" placeholder="Author">
+
+            <select id="genre">
+
+                <option>Fantasy</option>
+                <option>Romance</option>
+                <option>Science Fiction</option>
+                <option>Thriller</option>
+                <option>Horror</option>
+                <option>Biography</option>
+                <option>Self-help</option>
+                <option>Academic</option>
+                <option>AI & Technology</option>
+
+            </select>
+
+            <input type="text" id="mood" placeholder="Mood">
+
+            <input type="number" id="rating" placeholder="Rating">
+
+            <button onclick="addBook()">
+                Add Book
+            </button>
+
+        </div>
+
+        <div class="book-grid" id="bookGrid"></div>
+
+    </section>
+
+    <section class="charts">
+
+        <div class="chart-card">
+            <canvas id="genreChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <canvas id="ratingChart"></canvas>
+        </div>
+
+    </section>
+
+    <section class="assistant-panel">
+
+        <h2>AI Assistant</h2>
+
+        <div class="assistant-chat" id="assistantChat">
+
+            <div class="bot-msg">
+                Hello 👋 Ask me for recommendations.
+            </div>
+
+        </div>
+
+        <div class="assistant-input">
+
+            <input
+                type="text"
+                id="assistantInput"
+                placeholder="Ask AI..."
+            >
+
+            <button onclick="askAI()">
+                Send
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
